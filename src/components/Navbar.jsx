@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <div className=" flex items-center justify-between p-4 z-[100] w-full absolute">
       <Link to="/">
-        <h1 className=" text-red-600 text-4xl font-bold cursor-pointer">
+        <h1 className=" text-red-600 text-xl font-bold cursor-pointer sm:text-3xl md:text-4xl lg:text-5xl">
           NETFLIX
         </h1>
       </Link>
@@ -37,7 +37,7 @@ const Navbar = () => {
       ) : (
         <div>
           <Link to="/login">
-            <button className=" text-white pr-4 ">Sign In</button>
+            <button className=" text-white pr-4 sm:text-lg md:">Sign In</button>
           </Link>
           <Link to="/signup">
             <button className=" bg-red-600 px-6 py-2 rounded cursor-pointer text-white">
