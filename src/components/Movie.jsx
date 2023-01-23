@@ -26,6 +26,21 @@ const Movie = ({ item }) => {
       alert("PLease Log in to save a movie");
     }
   };
+  const movieDetail = async () => {
+    if (user?.email) {
+      setLike(!like);
+      setSaved(true);
+      await updateDoc(movieID, {
+        savedShows: arrayUnion({
+          id: item.id,
+          title: item.title,
+          img: item.backdrop_path,
+        }),
+      });
+    } else {
+      alert("PLease Log in to save a movie");
+    }
+  };
 
   return (
     <div className=" w-[160px] sm:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2">
